@@ -102,7 +102,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { addPurchaseDetails, clearCart, decreament, increament, remove } from "./Store";
-// import "bootstrap/dist/css/bootstrap.min.css";
+ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Cart() {
     const dispatch = useDispatch();

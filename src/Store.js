@@ -10,23 +10,23 @@ const productSlice = createSlice({
   name: 'products',
   initialState: {
     Veg: [
-      { image: 'tomato.jpg', price: 200.5 },
-      { image: 'potato.jpg', price: 300.5 },
-      { image: 'beans.jpg', price: 250.5 },
-      { image: 'carrot.jpg', price: 350.5 },
-      { image: 'cauliflower.jpg', price: 450.5 },
+      { image: 'tomato.jpg',name:'tomato', price: 200.5 },
+      { image: 'potato.jpg', name:'potato',price: 300.5 },
+      { image: 'beans.jpg',name:'beans', price: 250.5 },
+      { image: 'carrot.jpg',name:'carrot', price: 350.5 },
+      { image: 'cauliflower.jpg',name:'cauliflower', price: 450.5 },
     ],
     Nonveg: [
-      { image:"chiken.jpg",name: 'chicken', price: 800.0 },
-      { image: 'fish.jpg', price: 900.0 },
-      { image: 'mutton.jpg', price: 1000.0 },
+      { image:'chiken.jpg',name:'chiken',price: 800.0 },
+      { image: 'fish.jpg', name:'fish',price: 900.0 },
+      { image: 'mutton.jpg',name:'mutton', price: 1000.0 },
     ],
     Milk: [
-      { image: 'vijaya.jpg', price: 800.0 },
-      { image: 'heritage.jpg', price: 900.0 },
-      { image: 'sangam.jpg', price: 1000.0 },
-      { image: 'amul.jpg', price: 700.0 },
-      { image: 'Country Delight.jpg', price: 100.0 },
+      { image: 'vijaya.jpg',name:'vijaya', price: 800.0 },
+      { image: 'heritage.jpg',name:'heritage',price: 900.0 },
+      { image: 'sangam.jpg',name:'sangam', price: 1000.0 },
+      { image: 'amul.jpg',name:'amul', price: 700.0 },
+      { image: 'Country Delight.jpg', name:'Country Delight',price: 100.0 },
     ],
 
       // New cart state to store added products
@@ -52,7 +52,7 @@ const cartSlice = createSlice({
         item.quantity +=1;
       }
     },
-    decraement:(state,action) => {
+    decreament:(state,action) => {
       const item = state.find(item => item.name === action.payload.name);
       if(item && item.quantity > 1)
       {
